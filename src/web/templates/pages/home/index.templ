@@ -1,0 +1,18 @@
+package home
+
+import "golang-web-server/src/web/templates/pages/layouts"
+
+//go:generate templ render
+
+templ Home(data PageData) {
+    <!DOCTYPE html>
+    @layout.Base(layout.BaseProps{Title: data.Title, Description: "my first go templ page"}) {
+            <h1>{ data.Message }</h1>
+    }
+
+}
+
+type PageData struct {
+    Title   string
+    Message string
+}
