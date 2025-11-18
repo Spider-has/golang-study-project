@@ -4,3 +4,6 @@ go.sum
 main
 
 *_templ.go
+
+bin
+*bin/
